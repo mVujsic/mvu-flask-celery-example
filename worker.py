@@ -5,6 +5,3 @@ app = create_app()
 app.app_context().push()
 
 celery = exc_celery.celery
-
-# if __name__ == '__main__':
-#     app.run(port=5001)

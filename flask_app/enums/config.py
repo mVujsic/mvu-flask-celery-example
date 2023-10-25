@@ -9,3 +9,4 @@ class ApplicationTypeEnum(Enum):
 class CeleryTaskResultEnum(Enum):
     PENDING = 'PENDING'
     FAILURE = 'FAILURE'
+    PROGRESS = 'PROGRESS'

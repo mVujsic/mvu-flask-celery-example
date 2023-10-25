@@ -14,5 +14,5 @@ celery -A worker.celery flower --port=5555
 ```
 # Run worker - Windows
 ```shell
-celery -A worker.celery worker --loglevel=info -P threads
+celery -A worker.celery worker --loglevel=info -P threads -n worker1@%h
 ```

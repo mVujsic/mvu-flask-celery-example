@@ -6,6 +6,15 @@ name = "pypi"
 [packages]
 alembic='*'
 celery='*'
+marshmallow = "*"
+flask = "*"
+loguru = "*"
+flask-celeryext = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+python-dotenv = "*"
+psycopg2 = "*"
+
 [dev-packages]
 
 [requires]
