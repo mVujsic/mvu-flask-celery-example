@@ -37,7 +37,6 @@ def create_app():
     logger.info('Application set.')
 
     _register_blueprints(app)
-    from flask_app.tasks import long_task
 
     return app
 

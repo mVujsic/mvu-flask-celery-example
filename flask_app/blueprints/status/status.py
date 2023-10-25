@@ -26,8 +26,6 @@ def get(id):
         case _:
             response = {
                 "state": task.state,
-                "current": 1,
-                "total": 1,
                 "status": str(task.info)
             }
 
