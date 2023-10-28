@@ -12,7 +12,13 @@ docker exec -it celery-redis redis-cli ping
 ```shell
 celery -A worker.celery flower --port=5555
 ```
-# Run worker - Windows
+# Run workers - Windows
 ```shell
-celery -A worker.celery worker --loglevel=info -P threads -n worker1@%h
+celery -A worker.celery worker --loglevel=info -P threads -n worker_high@%h -Q high
+```
+```shell
+celery -A worker.celery worker --loglevel=info -P threads -n worker_normal@%h -Q normal
+```
+```shell
+celery -A worker.celery worker --loglevel=info -P threads -n worker_low@%h -Q low
 ```
