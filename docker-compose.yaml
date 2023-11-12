@@ -1,0 +1,37 @@
+services:
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    networks:
+      - celery
+    ports:
+      - '6379:6379'
+
+  api:
+    image: python:3.12-alpine
+    working_dir:
+      - /app
+
+
+  worker_low:
+    depends_on:
+      - redis
+    networks:
+      - celery
+
+  worker_normal:
+    depends_on:
+      - redis
+    networks:
+      - celery
+
+  worker_high:
+    depends_on:
+      - redis
+    networks:
+      - celery
+
+networks:
+  default:
+    external:
+      name: celery
